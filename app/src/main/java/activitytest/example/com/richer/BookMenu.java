@@ -35,7 +35,7 @@ public class BookMenu extends AppCompatActivity {
             public void onClick(View v) {
                 bookList.add(0,new Book(editText.getText().toString()));
                 Toast.makeText(BookMenu.this,"successfully add",Toast.LENGTH_SHORT).show();
-                recyclerView.setAdapter(adapter);
+                adapter.notifyDataSetChanged();
             }
         });
     }
